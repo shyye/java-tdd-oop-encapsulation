@@ -84,8 +84,6 @@ Calculator
     print(message)
 ```
 
-![](./assets/run-a-test.PNG)
-
 ## Exercise 2
 
 Create a class diagram for the below user stories and then create real classes for them in the `./src/main/java/com/booleanuk/core` directory. Follow a test driven development approach, adding test classes to the `./src/test/java/com/booleanuk/core` directory.
@@ -116,6 +114,8 @@ I want to be able to return the car for a refund if it breaks.
 ```
 
 ## Test Output
+
+![](./assets/run-a-test.PNG)
 
 When you run a test, it's either going to pass or fail. When it fails, you'll be presented with a big red stream of text. This is called a stack trace and, though intimidating, does contain some useful information.
 
