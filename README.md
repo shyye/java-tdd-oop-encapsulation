@@ -1,15 +1,119 @@
-# Java Template
+# Object-oriented Programming - Encapsulation
 
 ## Learning Objectives
-- Example learning objective
+- Define behaviour as the thing a program does
+- Define state as the thing a program knows
+- Explain that a class is a convenient encapsulation of behaviour and state
+- Use encapsulation to package related state and behaviour together
 
 ## Set up instructions
 - Fork this repository and clone the forked version to your machine
 - Open the root directory of the project in IntelliJ
-- Implement the requirements listed in comments in the `./src/main/java/com.booleanuk/core/Exercise.java` file
-- When ready to test your solution, open the `./src/test/java/com.booleanuk/core/ExerciseTest.java` file and click a "Run Test" button. You can either run the entire test suite via figure 1 in the screenshot below, or run a specific test via figure 2.
+
+## Introduction
+
+In object-oriented programming (OOP), we organise our code into multiple different objects in an effort to control the complexity of our project. Each of these objects are responsible for a single set of related behaviour and state, which we define in Java classes as methods and members.
+
+Methods are actions that an object performs, members contain the data that the class knows. You can think of a class quite literally as any real world thing:
+
+```
+Human {
+  name = "Joe Smith"
+  age = 62
+  
+  speak(sentence)
+  goToWork()
+  run()
+}
+
+Car {
+  colour = "Blue"
+  transmission = "Manual"
+  
+  accelerate()
+  break()
+  turnLeft()
+}
+```
+
+In the above examples, related behaviour and state are encapsulated into a single class. Consider a different example:
+
+```
+Human {
+  name = "Joe Smith"
+  transmission = "Manual"
+  
+  speak(sentence)
+  turnWipersOn()
+}
+```
+
+Does that class make sense? Maybe in a cyberpunk themed future, but not today! We call a class with unrelated behaviour / state a class with *low cohesion*. It doesn't make sense. When we're encapsulating program behaviour and state, we should always strive for *high cohesion* - everything in the class should relate to a single purpose.
+
+In order to design a cohesive system, one useful technique is to start with a [class diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/).
+
+Here's an example of a class diagram design for the above examples:
+
+![](./assets/class-diagram.PNG)
+
+Using diagrams like this, we can visualise the structure of our project before we start building it. We won't always stick to the diagram exactly, it's impossible to think of every edge-case ahead of time, but it does allow us to get started on the right foot.
+
+I used [gleek.io](https://www.gleek.io/) to create the diagram above. You can use any tool, including a piece of paper.
+
+## Exercise 1
+
+Design a class diagram to re-organise the below classes into a more cohesive system. Add your diagram to the repo and share your work in your cohort's classroom channel on Discord.
+
+```
+Bank
+    balance = 620.14
+    deposit(date, amount)
+    withdraw(date, amount)
+    generateStatementPDF()
+    
+Diary
+    owner = "John Smith"
+    lock()
+    unlock()
+    addEntry(entry)
+    getEntries()
+    
+Calculator
+    add(num1, num2)
+    subtract(num1, num2)
+    print(message)
+```
 
 ![](./assets/run-a-test.PNG)
+
+## Exercise 2
+
+Create a class diagram for the below user stories and then create real classes for them in the `./src/main/java/com/booleanuk/core` directory. Follow a test driven development approach, adding test classes to the `./src/test/java/com/booleanuk/core` directory.
+
+Note that there is no "one correct way" to complete this exercise, this is an opportunity to practice designing and implementing a simple system. Making mistakes is expected and encouraged.
+
+```
+As a parent,
+I want to buy my son a remote control toy car from your shop.
+
+I want to be able to choose the colour of the car.
+
+I want to be able to choose between rechargable and disposable batteries.
+
+I want to choose between a simple and an advanced remote control.
+
+I want to be able to see the battery percentage remaining.
+
+I want to be able to move the car forward and backward a specific distance.
+
+I want to be able to stop the car from moving.
+
+I want to be able to turn left and right.
+
+I want to be able to replace the battery if it breaks.
+
+I want to be able to return the car for a refund if it breaks.
+```
 
 ## Test Output
 
