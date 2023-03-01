@@ -90,6 +90,8 @@ Create a class diagram for the below user stories and then create real classes f
 
 Note that there is no "one correct way" to complete this exercise, this is an opportunity to practice designing and implementing a simple system. Making mistakes is expected and encouraged.
 
+Additionally, don't worry about creating complex logic. The focus of this exercise is at an encapsulation level, we don't need to see a method that can actually recharge a lithium battery!
+
 ```
 As a parent,
 I want to buy my son a remote control toy car from your shop.
