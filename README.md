@@ -115,6 +115,10 @@ I want to be able to replace the battery if it breaks.
 I want to be able to return the car for a refund if it breaks.
 ```
 
+## Next steps
+
+Now that you've practiced encapsulation, introduce this concept into your ongoing Bob's Bagels OOP exercise. Refactor your existing code if necessary. You should end up with multiple single purpose classes.
+
 ## Test Output
 
 ![](./assets/run-a-test.PNG)
